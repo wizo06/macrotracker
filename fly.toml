@@ -1,0 +1,17 @@
+# fly.toml app configuration file generated for macroplanner on 2023-09-07T00:13:22-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "macroplanner"
+primary_region = "ord"
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]

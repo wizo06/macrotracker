@@ -8,7 +8,7 @@ const SERVING_SIZE_IN_GRAMS_PER_NUTRIENT_AMOUNT = 100
 const ingredients = []
 
 Bun.serve({
-    port: 3000, 
+    port: 8080, 
     async fetch(req) { 
         const url = new URL(req.url);
         if (req.method === "GET" && url.pathname === "/") return new Response(Bun.file('base.html'));
