@@ -64,23 +64,19 @@ const Form = () => `
 <form hx-post="/foods" hx-target="#insertAfterMe" hx-swap="beforeend">
     <div class="grid">
         <div>
-            <label>Ingredients</label>
-            <input list="ingredient" name="ingredient" required />
+            <input list="ingredient" name="ingredient" placeholder="Select ingredient" required />
             <datalist id="ingredient">
                 ${data.SRLegacyFoods.map(f => `<option value="${f.fdcId}">${f.description}</option>`)}
             </datalist>
         </div>
         <div>
-            <label>Consumption amount (grams)</label>
-            <input type="number" name="consumptionAmount" required />    
+            <input type="number" name="consumptionAmount" placeholder="Consumption amount (grams)" required />    
         </div>
         <div>
             <input id="daily" type="radio" name="consumptionType" value="daily" checked />
             <label for="daily">Daily</label>
-            <br />
             <input id="weekly" type="radio" name="consumptionType" value="weekly" />
             <label for="weekly">Weekly</label>                
-            <br />
             <input id="monthly" type="radio" name="consumptionType" value="monthly" />
             <label for="monthly">Monthly</label>
         </div>    
@@ -95,11 +91,11 @@ const Table = () => `
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Ingredient</th>
-            <th scope="col"><span data-tooltip="Protein (grams)">🥩</span></th>
-            <th scope="col"><span data-tooltip="Fat (grams)">🥑</span></th>
-            <th scope="col"><span data-tooltip="Carbs (grams)">🍠</span></th>
-            <th scope="col"><span data-tooltip="Calories (kcal)">⚡</span></th>
-            <th scope="col"><span data-tooltip="Price (USD)">💵</span></th>
+            <th scope="col"><span data-tooltip="Daily intake of Protein (grams)">🥩</span></th>
+            <th scope="col"><span data-tooltip="Daily intake of Fat (grams)">🥑</span></th>
+            <th scope="col"><span data-tooltip="Daily intake of Carbs (grams)">🍠</span></th>
+            <th scope="col"><span data-tooltip="Daily intake of Calories (kcal)">⚡</span></th>
+            <th scope="col"><span data-tooltip="Daily cost (USD)">💵</span></th>
             <th scope="col"><span data-tooltip="Daily Consumption (grams)">☀️</span></th>
             <th scope="col"><span data-tooltip="Weekly Consumption (grams)">7️⃣</span></th>
             <th scope="col"><span data-tooltip="Monthly Consumption (grams)">🌙</span></th>
