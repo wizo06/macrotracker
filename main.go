@@ -30,7 +30,7 @@ func main() {
 	http.HandleFunc("/", base)
 	http.HandleFunc("/container", container)
 	http.HandleFunc("/foods", foods)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe("0.0.0.0:8080", nil)
 }
 
 func base(w http.ResponseWriter, r *http.Request) {
