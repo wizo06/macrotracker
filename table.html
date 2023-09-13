@@ -1,0 +1,46 @@
+<table>
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Ingredient</th>
+            <th scope="col"><span data-tooltip="Daily intake of Protein (grams)">🥩</span></th>
+            <th scope="col"><span data-tooltip="Daily intake of Fat (grams)">🥑</span></th>
+            <th scope="col"><span data-tooltip="Daily intake of Carbs (grams)">🍠</span></th>
+            <th scope="col"><span data-tooltip="Daily intake of Calories (kcal)">⚡</span></th>
+            <th scope="col"><span data-tooltip="Daily cost (USD)">💵</span></th>
+            <th scope="col"><span data-tooltip="Daily Consumption (grams)">☀️</span></th>
+            <th scope="col"><span data-tooltip="Weekly Consumption (grams)">7️⃣</span></th>
+            <th scope="col"><span data-tooltip="Monthly Consumption (grams)">🌙</span></th>
+        </tr>
+    </thead>
+    <tbody id="insertAfterMe">
+        {{ range . }}
+        <tr>
+            <td scope="row">{{ .ID }}</td>
+            <td>{{ .Description }}</td>
+            <td>{{ .DailyProtein }}</td>
+            <td>{{ .DailyFat }}</td>
+            <td>{{ .DailyCarb }}</td>
+            <td>{{ .DailyCal }}</td>
+            <td>{{ .DailyCost }}</td>
+            <td>{{ .DailyConsumption }}</td>
+            <td>{{ .WeeklyConsumption }}</td>
+            <td>{{ .MonthlyConsumption }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="col">Total</td>
+            <td />
+            <td id="totalDailyProtein" />
+            <td id="totalDailyFat" />
+            <td id="totalDailyCarbs" />
+            <td id="totalDailyCalories" />
+            <td id="totalDailyPrice" />
+            <td />
+            <td />
+            <td />
+        </tr>
+    </tfoot>
+</table>

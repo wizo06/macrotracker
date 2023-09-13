@@ -1,0 +1,2 @@
+migrate/*
+!migrate/migrate.go

@@ -1,0 +1,24 @@
+<form hx-post="/foods" hx-target="#insertAfterMe" hx-swap="beforeend">
+    <div class="grid">
+        <div>
+            <input list="ingredient" name="ingredient" placeholder="Select ingredient" required />
+            <datalist id="ingredient">
+                {{ range . }}
+                <option value="{{ .FdcID }}">{{ .Description }}</option>
+                {{ end }}                
+            </datalist>
+        </div>
+        <div>
+            <input type="number" name="consumptionAmount" placeholder="Consumption amount (grams)" required />    
+        </div>
+        <div>
+            <input id="daily" type="radio" name="consumptionType" value="daily" checked />
+            <label for="daily">Daily</label>
+            <input id="weekly" type="radio" name="consumptionType" value="weekly" />
+            <label for="weekly">Weekly</label>                
+            <input id="monthly" type="radio" name="consumptionType" value="monthly" />
+            <label for="monthly">Monthly</label>
+        </div>    
+    </div>
+    <input type="submit" value="Add" />
+</form>

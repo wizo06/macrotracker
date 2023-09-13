@@ -1,0 +1,17 @@
+<tr>
+    <td scope="row">{{ .ID }}</td>
+    <td>{{ .Description }}</td>
+    <td>{{ .DailyProtein }}</td>
+    <td>{{ .DailyFat }}</td>
+    <td>{{ .DailyCarb }}</td>
+    <td>{{ .DailyCal }}</td>
+    <td>${{ .DailyCost }}</td>
+    <td>{{ .DailyConsumption }}</td>
+    <td>{{ .WeeklyConsumption }}</td>
+    <td>{{ .MonthlyConsumption }}</td>
+</tr>
+<td id="totalDailyProtein" hx-swap-oob="outerHTML">{{ .TotalProtein }}</td>
+<td id="totalDailyFat" hx-swap-oob="outerHTML">{{ .TotalFat }}</td>
+<td id="totalDailyCarbs" hx-swap-oob="outerHTML">{{ .TotalCarbs }}</td>
+<td id="totalDailyCalories" hx-swap-oob="outerHTML">{{ .TotalCalories }}</td>
+<td id="totalDailyPrice" hx-swap-oob="outerHTML">${{ .TotalCost }}</td>
