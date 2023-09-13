@@ -1,5 +1,5 @@
-FROM oven/bun
+FROM golang
 
 COPY . .
 
-CMD ["bun", "run", "index.js"]
+CMD ["go", "run", "main.go"]
