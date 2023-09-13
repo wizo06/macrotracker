@@ -5,8 +5,7 @@
 
 app = "macroplanner"
 primary_region = "ord"
-
-[build]
+swap_size_mb = 512
 
 [http_service]
   internal_port = 8080
